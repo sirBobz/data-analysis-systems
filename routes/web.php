@@ -22,5 +22,11 @@ Route::middleware('auth')->group(function() {
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('return-view/all-data', 'DataProcessorController@allData')->name('data');
+
+Route::get('return-view/data-analysis', 'DataProcessorController@index')->name('data');
+
+Route::get('return-view/users', 'DataProcessorController@index')->name('data');
+
 
 });
