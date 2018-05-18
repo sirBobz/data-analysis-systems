@@ -17,6 +17,10 @@ Route::view('/','auth.login');
 Auth::routes();
 
 
-
+#Section Account Routes
+Route::middleware('auth')->group(function() {
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+});
