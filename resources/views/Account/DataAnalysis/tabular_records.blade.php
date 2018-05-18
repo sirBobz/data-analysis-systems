@@ -21,33 +21,35 @@
                   </button>
                 </div>
                 </div>
-
                 <div class="box-body">
                     <div class="table-responsive">
                       <table id="data" class="table table-striped table no-margin">
                         <thead>
                           <tr class="success">
                             <th class="text-center"> ID </th>
-                            <th class="text-center"> Phone Number</th>
-                            <th class="text-center"> Message</th>
-                            <th class="text-center"> Transaction Time</th>
-                            <th class="text-center"> Short Code </th>
+                            <th class="text-center"> Produce Variety</th>
+                            <th class="text-center"> Commodity Type</th>
+                            <th class="text-center"> Unit</th>
+                            <th class="text-center"> Volume in Kgs </th>
                             <th class="text-center"> Campaign Id</th>
-                            <th class="text-center"> service Id</th>
+                            <th class="text-center"> Values in Ksh</th>
+                            <th class="text-center"> Date</th>
+                            <th class="text-center"> Object ID</th>
                           </tr>
                         </thead>
                         <tbody>
                           <!--  Initialize Table ID counter -->
                           @php $id = 1; @endphp
-                          @foreach($members_records as $data)
+                          @foreach($allData as $data)
                           <tr>
                             <td class="text-center"> {{$id ++}} </td>
-                            <td class="text-center"> {{$data->dst_address}} </td>
-                            <td class="text-center"> {{$data->message}}</td>
-                            <td class="text-center"> {{$data->created_at}}</td>
-                            <td class="text-center"> {{$data->src_address}} </td>
-                            <td class="text-center"> {{$data->campaign_id}}</td>
-                            <td class="text-center"> {{$data->service_id}}</td>
+                            <td class="text-center"> {{$data->Produce_Variety}} </td>
+                            <td class="text-center"> {{$data->Commodity_Type}}</td>
+                            <td class="text-center"> {{$data->Unit}}</td>
+                            <td class="text-center"> {{$data->Volume_in_Kgs}} </td>
+                            <td class="text-center"> {{$data->Values_in_Ksh}}</td>
+                            <td class="text-center"> {{$data->Date}}</td>
+                            <td class="text-center"> {{$data->OBJECTID}}</td>
                           </tr>
                           @endforeach
                         </tbody>
