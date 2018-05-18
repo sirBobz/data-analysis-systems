@@ -17,10 +17,6 @@
         <a class="nav-link" href="{{ url('return-view/all-data') }}"><i class="icon-speedometer"></i> All Data </a>
       </li>
        <br>
-      <li class="divider"></li>
-      <li class="nav-title">
-        Extras
-      </li>
     </ul>
   </nav>
   <button class="sidebar-minimizer brand-minimizer" type="button"></button>

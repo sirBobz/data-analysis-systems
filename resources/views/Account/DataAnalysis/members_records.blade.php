@@ -4,7 +4,7 @@
 <section class="content-header">
   <ol class="breadcrumb">
     <li><a href="{{ url('return-view/dashboard') }}"><i class="fa fa-dashboard"> Dashboard </i>  </a></li>
-    <li><a href="{{ url('#') }}"><i class="">  Sms records </i> </a></li>
+    <li><a href="{{ url('#') }}"><i class=""> Data records </i> </a></li>
   </ol>
   <br>
 </section>
@@ -31,21 +31,23 @@
                             <th class="text-center"> Phone Number</th>
                             <th class="text-center"> Message</th>
                             <th class="text-center"> Transaction Time</th>
-                            <th class="text-center"> Source Address </th>
-                            <th class="text-center"> Status</th>
+                            <th class="text-center"> Short Code </th>
+                            <th class="text-center"> Campaign Id</th>
+                            <th class="text-center"> service Id</th>
                           </tr>
                         </thead>
                         <tbody>
                           <!--  Initialize Table ID counter -->
                           @php $id = 1; @endphp
-                          @foreach($sent_sms as $data)
+                          @foreach($members_records as $data)
                           <tr>
                             <td class="text-center"> {{$id ++}} </td>
                             <td class="text-center"> {{$data->dst_address}} </td>
                             <td class="text-center"> {{$data->message}}</td>
-                            <td class="text-center"> {{$data->updated_at}}</td>
+                            <td class="text-center"> {{$data->created_at}}</td>
                             <td class="text-center"> {{$data->src_address}} </td>
-                            <td class="text-center"> {{$data->response_desc}}</td>
+                            <td class="text-center"> {{$data->campaign_id}}</td>
+                            <td class="text-center"> {{$data->service_id}}</td>
                           </tr>
                           @endforeach
                         </tbody>
