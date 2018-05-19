@@ -52,8 +52,11 @@ class DataProcessorController extends Controller
     {
     	try 
     	{
-            $allData = Dataset::all();
-    		
+            $allData = Cache::remember('allData', 3, function()
+             {
+                 return Dataset::all();
+             });
+
     	    return view('Account.DataAnalysis.tabular_records', compact('allData'));
 
     	} 
