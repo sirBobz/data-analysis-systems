@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Dataset;
-use Cache, Exception;
+use Cache, Exception, Log;
+
 
 class DataProcessorController extends Controller
 {
@@ -34,7 +35,7 @@ class DataProcessorController extends Controller
     	} 
     	catch (Exception $e) 
     	{
-    		
+    		Log::error($e);
     	}
      
     }
@@ -62,7 +63,7 @@ class DataProcessorController extends Controller
     	} 
     	catch (Exception $e) 
     	{
-    		
+    	    Log::error($e);	
     	}
      
     }
