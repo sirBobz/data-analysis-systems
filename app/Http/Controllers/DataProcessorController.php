@@ -17,13 +17,13 @@ class DataProcessorController extends Controller
     {
         $this->middleware('auth');
     }
+
     /**
-     * Show allData from database 
-     * in tabular manner.
+     * Graphical representation of data
      *
      * @return \Illuminate\Http\Response
      */
-    public function allData()
+    public function index()
     {
     	try 
     	{
@@ -40,7 +40,7 @@ class DataProcessorController extends Controller
     }
 
 
-    index
+    
 
     /**
      * Show allData from database 
