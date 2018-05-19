@@ -7,9 +7,8 @@
             <br><br><br><br><br><br><br>
             <div class="card-group">
                 <div class="card p-4">
-                
                     <div class="card-body">
-                        <p class="text-muted">Sign In to your account</p>
+                        <p class="text-muted text-center">Sign In to your account</p>
                         <form method="POST" action="{{ route('login') }}">
 
                             {{ csrf_field() }}
@@ -25,10 +24,11 @@
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <button type="submit" class="btn btn-primary px-4">Login</button>
-                                    <a href="{{ url('password/reset') }}" class="btn btn-link px-0 pull-right">Forgot password?</a>
+                                    <a href="{{ url('register') }}" class="btn btn-btn btn-primary btn-sm px-4">Register</a>
+                                    <button type="submit" class="btn btn-primary btn-sm px-4 pull-right">Login</button>
                                 </div>
                             </div>
+                            <a href="{{ url('password/reset') }}" class="btn btn-link px-0">Reset Password?</a>
                         </form>
                     </div>
                 </div>
