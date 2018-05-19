@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use Reliese\Database\Eloquent\Model as Eloquent;
+use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class Dataset
@@ -20,7 +20,7 @@ use Reliese\Database\Eloquent\Model as Eloquent;
  *
  * @package App\Models
  */
-class Dataset extends Eloquent
+class Dataset extends Model
 {
 	protected $casts = [
 		'Volume_in_Kgs' => 'int',
