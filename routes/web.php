@@ -20,7 +20,7 @@ Auth::routes();
 #Section Account Routes
 Route::middleware('auth')->group(function() {
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('return-view/dashboard', 'HomeController@index')->name('home');
 
 Route::get('return-view/all-data', 'DataProcessorController@allData')->name('data');
 

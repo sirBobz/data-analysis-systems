@@ -20,10 +20,10 @@
       </a>
       <div class="dropdown-menu dropdown-menu-right">
         <div class="dropdown-header text-center">
-          <strong>{{ auth()->user()->name }}'s Account</strong>
+          <strong><font size="2"> {{ auth()->user()->name }}'s Account </font></strong>
         </div>
         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-lock"></i>
-          Logout
+          <font size="2"> Logout </font>
         </a>
       </div>
     </li>

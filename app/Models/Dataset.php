@@ -22,6 +22,13 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Dataset extends Model
 {
+	/**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'datasets';
+    
 	protected $casts = [
 		'Volume_in_Kgs' => 'int',
 		'OBJECTID' => 'int'
